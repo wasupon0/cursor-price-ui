@@ -44,12 +44,12 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="bg-black min-h-screen w-full flex items-center justify-center p-4">
+    <div className="flex items-center justify-center w-full min-h-screen p-4 bg-black">
       <div className="w-full max-w-6xl">
-        <h1 className="text-5xl font-bold text-white text-center mb-12">
+        <h1 className="mb-12 text-5xl font-bold text-center text-white">
           Pricing
         </h1>
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid gap-8 md:grid-cols-2">
           {pricingData.map((plan, index) => (
             <Card
               key={index}
@@ -90,16 +90,16 @@ const Pricing = () => {
                 </ul>
               </CardContent>
               <CardFooter className="flex flex-col items-start">
-                <p className="text-3xl font-bold text-white mb-4">
+                <p className="mb-4 text-3xl font-bold text-white">
                   ${plan.price}{" "}
                   <span className="text-sm font-normal text-zinc-400">
                     / month
                   </span>
                 </p>
-                <div className="flex justify-between items-center w-full">
+                <div className="flex items-center justify-between w-full">
                   <Button
                     variant="outline"
-                    className="rounded-full bg-white text-black hover:bg-zinc-200 px-6"
+                    className="px-6 text-black bg-white rounded-full hover:bg-zinc-200"
                     asChild
                   >
                     <a href={plan.buttonLink}>{plan.buttonText}</a>
@@ -107,7 +107,7 @@ const Pricing = () => {
                   {plan.showLimits && (
                     <a
                       href="#"
-                      className="text-sm text-zinc-400 hover:text-white transition-colors"
+                      className="text-sm transition-colors text-zinc-400 hover:text-white"
                     >
                       Limits apply &gt;
                     </a>
